@@ -1,0 +1,28 @@
+@model List<Exo4.Monkey>
+
+<h2>Monkey</h2>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">#</th>
+        <th scope="col">@Html.DisplayNameForInnerType((Monkey m)  => m.Name)</th>
+        <th scope="col">@Html.DisplayNameForInnerType((Monkey m)  => m.Age)</th>
+        <th scope="col">Details</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var monkey in Model)
+    {
+        <tr>
+            <th scope="row">@monkey.Id</th>
+            <td>@monkey.Name</td>
+            <td>@monkey.Age</td>
+            <td><a asp-action="Details" asp-route-id="@monkey.Id" class="btn btn-primary">Details</a></td>
+        </tr>
+    }
+    
+    </tbody>
+</table>
+
+<a asp-action="CreateRandomMonkey">Create New Monkey</a>

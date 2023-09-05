@@ -1,0 +1,14 @@
+@model Exo4.Monkey?
+
+@{
+    ViewBag.Title = "title";
+    Layout = "_Layout";
+}
+
+<h2>title</h2>
+
+@Html.DisplayNameFor(m => m.Id) = @Model.Id
+@Html.DisplayNameFor(m => m.Name) = @Model.Name
+@Html.DisplayNameFor(m => m.Age) = @Model.Age
+
+<a asp-action="Index" class="btn btn-primary">Retour à la liste</a>
